@@ -1,8 +1,10 @@
-import Button from "@mui/material/Button";
+import React from "react";
+import { Button } from "@mui/material";
 import { useColorScheme } from "@mui/material/styles";
 
-export const ModeToggle = () => {
+const ModeToggle: React.FC = () => {
   const { mode, setMode } = useColorScheme();
+
   return (
     <Button
       onClick={() => {
@@ -13,6 +15,8 @@ export const ModeToggle = () => {
     </Button>
   );
 };
+
+export default ModeToggle;
 
 /**
  * - using hook useColorScheme, this hook will help us to save theme variable like dark or light to local storage so that we don't need to save it by ourselves
