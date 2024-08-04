@@ -1,10 +1,22 @@
 "use client";
-import { Button, PaletteMode, Typography, useColorScheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  PaletteMode,
+  Typography,
+  useColorScheme,
+} from "@mui/material";
 // import useMediaQuery from "@mui/material/useMediaQuery";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+// icon
+import {
+  LightMode,
+  DarkModeOutlined,
+  SettingsBrightness,
+} from "@mui/icons-material";
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme();
@@ -24,9 +36,32 @@ function ModeSelect() {
         label="Mode"
         onChange={handleChange}
       >
-        <MenuItem value="light">Light</MenuItem>
-        <MenuItem value="dark">Dark</MenuItem>
-        <MenuItem value="system">System</MenuItem>
+        <MenuItem value="light">
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <LightMode fontSize="small" />
+            Light
+          </div>
+        </MenuItem>
+        <MenuItem value="dark">
+          {/* <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <DarkModeOutlined fontSize="small" />
+            Dark
+          </div> */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <DarkModeOutlined fontSize="small" />
+            Dark
+          </Box>
+        </MenuItem>
+        <MenuItem value="system">
+          {/* <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <SettingsBrightness fontSize="small" />
+            System
+          </div> */}
+          <Box display="flex" alignItems="center" gap={1}>
+            <SettingsBrightness fontSize="small" />
+            System
+          </Box>
+        </MenuItem>
       </Select>
     </FormControl>
   );
