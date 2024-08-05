@@ -6,7 +6,7 @@ import { handleLogoutAPI, handleCallRefreshTokenAPI } from "~/apis";
 //khởi tạo 1 đối tượng axios (authorizedAxiosInstance) mục đích để custom và cấu hình chung cho dự án
 let authorizedAxiosInstance = axios.create();
 
-//thời gian chờ tối đa của 1 request : 10p
+//thời gian chờ tối đa của 1 request : 10mins
 authorizedAxiosInstance.defaults.timeout = 100 * 60 * 10;
 
 //phục vụ cho trường hợp chúng ta sử dụng JWT token (refresh và access) theo cơ chế httpOnly cookie
