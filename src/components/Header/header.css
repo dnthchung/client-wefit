@@ -1,0 +1,25 @@
+.custom-button {
+  background-color: white;
+  color: #2d3748; /* Tailwind's text-gray-800 */
+  padding: 0.25rem 0.5rem; /* Tailwind's py-1 px-2 */
+  border: 1px solid #e2e8f0; /* Tailwind's border-gray-200 */
+  border-radius: 0.25rem; /* Tailwind's rounded */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Tailwind's shadow */
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.custom-button:hover {
+  background-color: #f7fafc; /* Tailwind's hover:bg-gray-50 */
+}
+
+.custom-icon {
+  height: 1.25rem; /* Tailwind's h-5 */
+  width: 1.25rem; /* Tailwind's w-5 */
+  opacity: 0.55; /* Tailwind's opacity-55 */
+  color: black;
+  transition: opacity 0.2s;
+}
+
+.custom-icon:hover {
+  opacity: 0.85; /* Tailwind's hover:opacity-85 */
+}
