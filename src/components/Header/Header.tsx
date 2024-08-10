@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <>
       <AppBar
-        position="static"
+        position="fixed"
         sx={{
           boxShadow: "none",
           borderBottom: "1px solid",
